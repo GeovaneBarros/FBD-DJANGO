@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %} Criar usuário {% endblock%}
+
+{%block content %}
+<form method="POST">
+<div class='container'>
+    <div class='form-group'>
+    {% csrf_token %}
+    {{form.as_p}}
+    <button class = 'btn btn-primary'>Cadastrar</button>
+    </div>
+</div>
+</form>
+
+
+{% endblock%}
